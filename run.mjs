@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 
-const wasmPath = new URL("./target/wasm32-unknown-unknown/release/test_hello_wasm.wasm", import.meta.url);
+const wasmPath = new URL("./target/wasm32-unknown-unknown/release/test_hello_wasm_vanilla.wasm", import.meta.url);
 
 const wasmBytes = await fs.readFile(wasmPath);
 

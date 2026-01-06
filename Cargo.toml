@@ -1,9 +1,5 @@
-[package]
-name = "test-hello-wasm"
-version = "0.1.0"
-edition = "2024"
-
-[lib]
-crate-type = ["cdylib"]
-
-[dependencies]
+[workspace]
+resolver = "3"
+members = [
+	"crates/vanilla",
+]
