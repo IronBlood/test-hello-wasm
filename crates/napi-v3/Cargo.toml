@@ -7,7 +7,7 @@ edition = "2024"
 crate-type = ["cdylib"]
 
 [dependencies]
-napi = "3"
+napi = { version = "3", features = ["async"] }
 napi-derive = "3"
 
 [build-dependencies]
