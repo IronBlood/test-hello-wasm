@@ -1,0 +1,12 @@
+node_modules/
+
+*.node
+browser.js
+hello.wasi-browser.js
+hello.wasi.cjs
+hello.wasm32-wasi.debug.wasm
+hello.wasm32-wasi.wasm
+index.d.ts
+index.js
+wasi-worker-browser.mjs
+wasi-worker.mjs

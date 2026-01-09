@@ -1,0 +1,27 @@
+{
+	"name": "napi-v3",
+	"scripts": {
+		"build": "napi build --platform --release",
+		"build:debug": "napi build --platform"
+	},
+	"napi": {
+		"binaryName": "hello",
+		"wasm": {
+			"initialMemory": 16384,
+			"browser": {
+				"fs": true,
+				"buffer": true
+			}
+		},
+		"targets": [
+			"wasm32-wasi-preview1-threads"
+		]
+	},
+	"dependencies": {
+		"@napi-rs/wasm-runtime": "^1.1.1"
+	},
+	"devDependencies": {
+		"@napi-rs/cli": "^3.5.1",
+		"@napi-rs/image-wasm32-wasi": "^1.12.0"
+	}
+}
