@@ -1,4 +1,16 @@
 {
 	"name": "test-hello-wasm",
+	"scripts": {
+		"bundle": "npm run bundle:test && npm run bundle:wasm && npm run bundle:worker",
+		"bundle:test": "esbuild test/browser-tests.entry.mjs --bundle --format=esm --platform=browser --sourcemap --outfile=test/dist/browser-tests.mjs",
+		"bundle:wasm": "cp crates/napi-v3/hello.wasm32-wasi.wasm test/dist/",
+		"bundle:worker": "esbuild crates/napi-v3/wasi-worker-browser.mjs --bundle --format=esm --platform=browser --sourcemap --outfile=test/dist/wasi-worker-browser.mjs",
+		"serve": "node test/run-browser-tests.mjs"
+	},
+	"devDependencies": {
+		"esbuild": "^0.27.2",
+		"sirv": "^3.0.2",
+		"uvu": "^0.5.6"
+	},
 	"private": true
 }
