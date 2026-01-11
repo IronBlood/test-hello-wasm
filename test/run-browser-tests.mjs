@@ -8,12 +8,12 @@ const serve = sirv(path.dirname(fileURLToPath(import.meta.url)), {
 	single: false,
 });
 
+const PORT = Number(process.env.PORT) || 4173;
+
 const server = http.createServer((req, res) => {
 	res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
 	res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
 	res.setHeader("Cross-Origin-Resource-Policy", "same-origin");
 	return serve(req, res)
 });
-await new Promise((r) => server.listen(0, r));
-const { port } = server.address();
-console.log(`http://127.0.0.1:${port}/test.html`);
+server.listen(PORT);

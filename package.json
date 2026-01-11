@@ -8,6 +8,8 @@
 		"serve": "node test/run-browser-tests.mjs"
 	},
 	"devDependencies": {
+		"@playwright/test": "^1.57.0",
+		"@types/node": "^25.0.5",
 		"esbuild": "^0.27.2",
 		"sirv": "^3.0.2",
 		"uvu": "^0.5.6"
