@@ -16,6 +16,9 @@ cargo build -p test-hello-wasm-vanilla --target wasm32-unknown-unknown --release
 
 # for napi-v3
 DEBUG="napi:*" pnpm run --filter napi-v3 build --target wasm32-wasip1-threads
+
+# for napi-v3 wasm32-unknown-unknown
+cargo build -p test-hello-wasm-napi-v3-unknown --target wasm32-unknown-unknown --release
 ```
 
 ## Run
@@ -26,6 +29,9 @@ node run.mjs
 
 # run napi-v3
 node run-napi-v3.mjs
+
+# run napi-v3-unknown
+node run-napi-v3-unknown.mjs
 ```
 
 ## Test in Browsers

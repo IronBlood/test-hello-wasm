@@ -2,5 +2,6 @@
 resolver = "3"
 members = [
 	"crates/napi-v3",
+	"crates/napi-v3-unknown",
 	"crates/vanilla",
 ]

@@ -292,6 +292,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "test-hello-wasm-napi-v3-unknown"
+version = "0.1.0"
+dependencies = [
+ "napi",
+ "napi-derive",
+]
+
+[[package]]
 name = "test-hello-wasm-vanilla"
 version = "0.1.0"
 
